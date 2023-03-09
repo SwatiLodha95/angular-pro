@@ -1,0 +1,56 @@
+<dl>
+    <dt>Structural directive</dt>
+<dd>
+    which changest html (structural) at run time
+</dd>
+<u>
+    <li> *ngIf </li>
+    <li> *ngFor </li>
+    <li> ngSwitch</li>
+</u>
+</dl>
+<p *ngIf="isShow; else elsePart">
+hello directive
+</p>
+<p [hidden]="isShow">I am learning directive</p>
+<ng-template #elsePart>
+    today is navaratri
+</ng-template>
+<button (click)="toggle()">click me</button>
+<p> ngFor</p>
+<ul>
+    <li *ngFor="let x of arr">
+      {{x}}
+    </li>
+   </ul>
+   <table>
+   <table class="table">
+    <tr>
+    <th>id</th>
+    <th>name</th>
+    <th>goal</th>
+</tr>
+<tr *ngFor="let user of userArray">
+   <td>{{user.id}}</td>
+   <td>{{user.name}}</td>
+   <td>{{user.goal}}</td>
+
+</tr>
+   </table>
+   <h3>ngSwitch</h3>
+   <ul [ngSwitch]="city">
+    <li *ngSwitchCase="'pune'">pune</li>
+    <li *ngSwitchCase="'satara'">SATARA</li>
+    <li *ngSwitchCase="'nashik'">NASHIK</li>
+    <li *ngSwitchCase="'nagar'">NAGAR</li>
+    <li *ngSwitchDefault>No City Found</li>
+   </ul>
+
+   <h3>Attribute Directive</h3>
+   <ul>
+    <li>ngClass</li>
+    <li>ngStyle</li>
+   </ul>
+   <button (click)="toggle()">Me</button><br>
+   <button [ngClass]="isShow ? 'btn btn-primary': 'btn btn-secondary'">my button</button><br><br>
+   <button [ngStyle]="{'color': isShow ? 'red' : 'blue'}">style</button>

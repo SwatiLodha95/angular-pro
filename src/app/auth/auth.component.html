@@ -1,0 +1,23 @@
+<div class="container-fluide">
+    <div class="row">
+        <div class="col">
+            <form class="form" [formGroup]="registerForm" (ngSubmit)="registerNewUser(registerForm)">
+                <div class="form-group">
+                    <input type="username" placeholder="Enter Username" class="form-control" formControlName="username">
+                </div><br>
+                <div class="form-group">
+                    <input type="password" placeholder="Enter password" class="form-control" formControlName="password">
+                </div><br>
+                <div class="form-group">
+                    <input type="password" placeholder="Enter confirm password" class="form-control"
+                        formControlName="confirmpassword">
+                </div>
+                <br>
+                <button type="submit" class="btn btn-primary">Register</button>
+            </form>
+            </div>
+        <div class="col">
+
+        </div>
+    </div>
+</div>

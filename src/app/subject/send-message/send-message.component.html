@@ -1,0 +1,15 @@
+<h3>Send Message</h3>
+<div class="row">
+    <div class="col">
+        <input type="text" class="form-control" [(ngModel)]="msg">
+    </div>
+</div>
+<br>
+<div class="row">
+    <div class="col-3">
+        <button class="btn btn-success" (click)="send()">Send</button>    
+    </div>
+    <div class="col-3">
+        <button class="btn btn-dark" (click)="reset()">Reset</button>
+    </div>
+</div>

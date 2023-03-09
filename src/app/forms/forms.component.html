@@ -1,0 +1,15 @@
+<form class="form m-3 w-50" [formGroup]="loginForm" (ngSubmit)="onTap(loginForm)">
+    <div class="form-group">
+    <label for="name">Enter Email</label>
+    <input type="email" class="form-control" formControlName="mail">
+    </div>
+    <p class="text-danger" *ngIf="issubmiited && loginForm.controls['name'].errors">Enter Valid User Email</p>
+    <div class="form-group">
+        <label for="password">Enter Password</label>
+    <input type="password" class="form-control" formControlName="password">
+    </div>    
+    <p class="text-danger" *ngIf="issubmiited && loginForm.controls['password'].errors">Enter Valid Password  </p>
+    <br>
+    <button class="btn btn-primary" type="submit">Submit</button>
+</form>
+
